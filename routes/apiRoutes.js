@@ -48,7 +48,6 @@ notes.delete("/:id", (req, res) => {
       writeToFile("./db/db.json", filterData);
     }
   });
-  res.send(`Deleted note with ${req.params.id}`);
 });
 
 module.exports = notes;
