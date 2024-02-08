@@ -1,3 +1,4 @@
+//Dependencies
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
 
@@ -48,6 +49,7 @@ notes.delete("/:id", (req, res) => {
       writeToFile("./db/db.json", filterData);
     }
   });
+  res.send(`Deleted note with ${req.params.id}`);
 });
 
 module.exports = notes;
